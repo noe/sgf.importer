@@ -34,7 +34,8 @@ public final class GtpClient
     public static class ExecFailed
         extends GtpError
     {
-        public String m_program;
+		private static final long serialVersionUID = 1L;
+		public String m_program;
 
         public ExecFailed(String program, String message)
         {

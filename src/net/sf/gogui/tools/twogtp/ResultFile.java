@@ -15,8 +15,9 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import net.sf.gogui.game.ConstNode;
+
 import net.sf.gogui.game.ConstGame;
+import net.sf.gogui.game.ConstNode;
 import net.sf.gogui.go.Komi;
 import net.sf.gogui.sgf.SgfError;
 import net.sf.gogui.sgf.SgfReader;
@@ -26,7 +27,6 @@ import net.sf.gogui.util.Platform;
 import net.sf.gogui.util.StringUtil;
 import net.sf.gogui.util.Table;
 import net.sf.gogui.xml.XmlWriter;
-import net.sf.gogui.version.Version;
 
 public class ResultFile
 {
@@ -134,10 +134,10 @@ public class ResultFile
             OutputStream out = new FileOutputStream(file);
             if (m_useXml)
                 new XmlWriter(out, game.getTree(),
-                              "gogui-twogtp:" + Version.get());
+                              "gogui-twogtp:");
             else
                 new SgfWriter(out, game.getTree(),
-                              "gogui-twogtp", Version.get());
+                              "gogui-twogtp", "XXX");
             m_games.put(gameIndex, moves);
         }
         catch (FileNotFoundException e)

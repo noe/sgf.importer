@@ -2,15 +2,18 @@
 
 package net.sf.gogui.tools.terminal;
 
+import static net.sf.gogui.go.GoColor.BLACK_WHITE;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.ArrayList;
+
 import net.sf.gogui.game.ConstNode;
 import net.sf.gogui.game.GameInfo;
 import net.sf.gogui.game.GameTree;
@@ -18,9 +21,8 @@ import net.sf.gogui.game.Node;
 import net.sf.gogui.go.Board;
 import net.sf.gogui.go.BoardUtil;
 import net.sf.gogui.go.GoColor;
-import static net.sf.gogui.go.GoColor.BLACK_WHITE;
-import net.sf.gogui.go.Move;
 import net.sf.gogui.go.GoPoint;
+import net.sf.gogui.go.Move;
 import net.sf.gogui.gtp.GtpClient;
 import net.sf.gogui.gtp.GtpError;
 import net.sf.gogui.gtp.GtpResponseFormatError;
@@ -29,7 +31,6 @@ import net.sf.gogui.sgf.SgfError;
 import net.sf.gogui.sgf.SgfReader;
 import net.sf.gogui.sgf.SgfWriter;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 
 /** Simple text based interface to Go programs supporting GTP. */
 public class Terminal
@@ -357,7 +358,7 @@ public class Terminal
         try
         {
             OutputStream out = new FileOutputStream(file);
-            new SgfWriter(out, m_tree, "gogui-terminal", Version.get());
+            new SgfWriter(out, m_tree, "gogui-terminal", "XXX");
         }
         catch (FileNotFoundException e)
         {

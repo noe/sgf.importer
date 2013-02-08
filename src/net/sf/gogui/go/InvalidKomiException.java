@@ -8,6 +8,7 @@ import net.sf.gogui.util.ErrorMessage;
 public class InvalidKomiException
     extends ErrorMessage
 {
+	private static final long serialVersionUID = 1L;
     public InvalidKomiException(String s)
     {
         super("Invalid komi: " + s);

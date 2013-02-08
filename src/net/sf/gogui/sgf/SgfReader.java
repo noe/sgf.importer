@@ -131,6 +131,7 @@ public final class SgfReader
     private static class SgfCharsetChanged
         extends Exception
     {
+		private static final long serialVersionUID = 1L;
     }
 
     private final boolean m_isFile;

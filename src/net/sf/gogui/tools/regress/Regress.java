@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import net.sf.gogui.gtp.GtpClient;
 import net.sf.gogui.gtp.GtpError;
 import net.sf.gogui.gtp.GtpUtil;
@@ -94,7 +95,9 @@ public class Regress
     private static class ProgramIsDeadException
         extends Exception
     {
-        public String getMessage()
+		private static final long serialVersionUID = 1L;
+
+		public String getMessage()
         {
             return "Program died";
         }

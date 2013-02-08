@@ -4,9 +4,9 @@ package net.sf.gogui.tools.dummy;
 
 import java.io.File;
 import java.io.PrintStream;
+
 import net.sf.gogui.util.Options;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 
 /** Dummy main function. */
 public final class Main
@@ -41,7 +41,7 @@ public final class Main
             }
             if (opt.contains("version"))
             {
-                System.out.println("gogui-dummy " + Version.get());
+                System.out.println("gogui-dummy ");
                 return;
             }
             PrintStream log = null;

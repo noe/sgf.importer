@@ -2,17 +2,19 @@
 
 package net.sf.gogui.tools.twogtp;
 
+import static net.sf.gogui.go.GoColor.BLACK;
+import static net.sf.gogui.go.GoColor.WHITE;
+
 import java.util.ArrayList;
-import net.sf.gogui.game.ConstNode;
+
 import net.sf.gogui.game.ConstGameTree;
+import net.sf.gogui.game.ConstNode;
 import net.sf.gogui.game.Game;
 import net.sf.gogui.game.NodeUtil;
 import net.sf.gogui.game.TimeSettings;
 import net.sf.gogui.go.BlackWhiteSet;
 import net.sf.gogui.go.ConstBoard;
 import net.sf.gogui.go.GoColor;
-import static net.sf.gogui.go.GoColor.BLACK;
-import static net.sf.gogui.go.GoColor.WHITE;
 import net.sf.gogui.go.GoPoint;
 import net.sf.gogui.go.InvalidKomiException;
 import net.sf.gogui.go.Komi;
@@ -27,7 +29,6 @@ import net.sf.gogui.util.ErrorMessage;
 import net.sf.gogui.util.ObjectUtil;
 import net.sf.gogui.util.Platform;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 
 /** GTP adapter for playing games between two Go programs. */
 public class TwoGtp
@@ -152,7 +153,7 @@ public class TwoGtp
         else if (command.equals("name"))
             cmd.setResponse("gogui-twogtp");
         else if (command.equals("version"))
-            cmd.setResponse(Version.get());
+            cmd.setResponse("XXX");
         else if (command.equals("protocol_version"))
             cmd.setResponse("2");
         else if (command.equals("list_commands"))
@@ -306,9 +307,6 @@ public class TwoGtp
     private String m_openingFile;
 
     private final String m_filePrefix;
-
-    private final ArrayList<ArrayList<Compare.Placement>> m_games
-        = new ArrayList<ArrayList<Compare.Placement>>(100);
 
     private ResultFile m_resultFile;
 

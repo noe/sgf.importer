@@ -10,7 +10,9 @@ public final class PointList
     extends ArrayList<GoPoint>
     implements ConstPointList
 {
-    public class ConstIterator
+	private static final long serialVersionUID = 1L;
+
+	public class ConstIterator
         implements Iterator<GoPoint>
     {
         public boolean hasNext()

@@ -2,7 +2,6 @@
 
 package net.sf.gogui.util;
 
-import  net.sf.gogui.version.Version;
 
 /** Static utility functions related to HTML writing. */
 public final class HtmlUtil
@@ -22,7 +21,7 @@ public final class HtmlUtil
         buffer.append(" by ");
         buffer.append(applicationName);
         buffer.append(' ');
-        buffer.append(Version.get());
+        buffer.append("XXX");
         buffer.append(" (<a href=\"http://gogui.sf.net\">"
                       + "http://gogui.sf.net</a>)</small></i></p>\n");
         return buffer.toString();
@@ -40,7 +39,7 @@ public final class HtmlUtil
                       "<meta name=\"generator\" content=\"");
         buffer.append(applicationName);
         buffer.append(' ');
-        buffer.append(Version.get());
+        buffer.append("XXX");
         buffer.append(" (http://gogui.sf.net)\">\n");
         return buffer.toString();
     }

@@ -8,7 +8,8 @@ import net.sf.gogui.util.ErrorMessage;
 public class GtpError
     extends ErrorMessage
 {
-    public GtpError(String s)
+	private static final long serialVersionUID = 1L;
+	public GtpError(String s)
     {
         super(s);
     }

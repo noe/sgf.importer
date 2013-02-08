@@ -8,7 +8,8 @@ package net.sf.gogui.gtp;
 public class GtpResponseFormatError
     extends Exception
 {
-    public GtpResponseFormatError(String s)
+	private static final long serialVersionUID = 1L;
+	public GtpResponseFormatError(String s)
     {
         super(s);
     }

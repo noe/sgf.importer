@@ -5,9 +5,9 @@ package net.sf.gogui.tools.regress;
 import java.io.File;
 import java.io.PrintStream;
 import java.util.ArrayList;
+
 import net.sf.gogui.util.Options;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 
 /** Regress main function. */
 public final class Main
@@ -33,7 +33,7 @@ public final class Main
             }
             if (opt.contains("version"))
             {
-                System.out.println("gogui-regress " + Version.get());
+                System.out.println("gogui-regress ");
                 return;
             }
             boolean verbose = opt.contains("verbose");

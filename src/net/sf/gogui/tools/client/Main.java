@@ -5,7 +5,6 @@ package net.sf.gogui.tools.client;
 import net.sf.gogui.util.Options;
 import net.sf.gogui.util.StreamCopy;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 import java.io.InputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -89,7 +88,7 @@ public final class Main
             }
             if (opt.contains("version"))
             {
-                System.out.println("gogui-client " + Version.get());
+                System.out.println("gogui-client ");
                 System.exit(0);
             }
             int timeout = opt.getInteger("timeout", 10, 0);

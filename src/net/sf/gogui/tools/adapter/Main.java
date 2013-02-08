@@ -5,11 +5,11 @@ package net.sf.gogui.tools.adapter;
 import java.io.File;
 import java.io.PrintStream;
 import java.util.ArrayList;
+
 import net.sf.gogui.go.GoPoint;
 import net.sf.gogui.util.ErrorMessage;
 import net.sf.gogui.util.Options;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 
 /** Adapter main function. */
 public final class Main
@@ -44,7 +44,7 @@ public final class Main
                 if (opt.getArguments().size() > 0)
                     throw new ErrorMessage("No arguments allowed with"
                                            + " option -version");
-                System.out.println("gogui-adapter " + Version.get());
+                System.out.println("gogui-adapter ");
                 return;
             }
             boolean verbose = opt.contains("verbose");

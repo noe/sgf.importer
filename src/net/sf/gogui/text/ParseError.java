@@ -8,7 +8,8 @@ import net.sf.gogui.util.ErrorMessage;
 public class ParseError
     extends ErrorMessage
 {
-    public ParseError(String s)
+	private static final long serialVersionUID = 1L;
+	public ParseError(String s)
     {
         super(s);
     }

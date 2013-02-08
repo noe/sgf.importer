@@ -4,13 +4,13 @@ package net.sf.gogui.tools.twogtp;
 
 import java.io.File;
 import java.util.ArrayList;
+
 import net.sf.gogui.game.TimeSettings;
 import net.sf.gogui.go.GoPoint;
 import net.sf.gogui.go.Komi;
 import net.sf.gogui.util.ErrorMessage;
 import net.sf.gogui.util.Options;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 
 /** TwoGtp main function. */
 public final class Main
@@ -87,7 +87,7 @@ public final class Main
             }
             if (opt.contains("version"))
             {
-                System.out.println("gogui-twogtp " + Version.get());
+                System.out.println("gogui-twogtp " + "XXX");
                 System.exit(0);
             }
             boolean force = opt.contains("force");

@@ -15,7 +15,6 @@ import net.sf.gogui.util.ErrorMessage;
 import net.sf.gogui.util.FileUtil;
 import net.sf.gogui.util.Options;
 import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 import net.sf.gogui.xml.XmlWriter;
 
 /** Convert SGF and Jago XML Go game files to other formats. */
@@ -44,7 +43,7 @@ public final class Main
             }
             if (opt.contains("version"))
             {
-                System.out.println("gogui-convert " + Version.get());
+                System.out.println("gogui-convert ");
                 System.exit(0);
             }
             boolean force = opt.contains("force");
@@ -90,13 +89,12 @@ public final class Main
             }
             if (! checkOnly)
             {
-                String version = Version.get();
                 if (format.equals("xml"))
                     new XmlWriter(new FileOutputStream(out), tree,
-                                  "gogui-convert:" + version);
+                                  "gogui-convert: XXX" );
                 else if (format.equals("sgf"))
                     new SgfWriter(new FileOutputStream(out), tree,
-                                  "gogui-convert", version);
+                                  "gogui-convert", "XXX");
                 else if (format.equals("tex"))
                     new TexWriter(title, new FileOutputStream(out), tree);
                 else

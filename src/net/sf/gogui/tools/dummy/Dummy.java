@@ -6,13 +6,13 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Random;
+
 import net.sf.gogui.go.GoPoint;
 import net.sf.gogui.go.PointList;
 import net.sf.gogui.gtp.GtpCallback;
 import net.sf.gogui.gtp.GtpCommand;
 import net.sf.gogui.gtp.GtpEngine;
 import net.sf.gogui.gtp.GtpError;
-import net.sf.gogui.version.Version;
 
 /** Dummy Go program for testing GTP controlling programs.
     See the gogui-dummy documentation for information about the extension
@@ -27,7 +27,7 @@ public class Dummy
         super(log);
         registerCommands();
         setName("gogui-dummy");
-        setVersion(Version.get());
+        setVersion("XXX");
         m_random = new Random();
         m_resign = resign;
         if (useRandomSeed)

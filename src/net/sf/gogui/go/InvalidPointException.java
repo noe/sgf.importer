@@ -6,7 +6,8 @@ package net.sf.gogui.go;
 public class InvalidPointException
     extends Exception
 {
-    /** Constructor.
+	private static final long serialVersionUID = 1L;
+	/** Constructor.
         @param text The text that could not be parsed as a point. */
     public InvalidPointException(String text)
     {

@@ -2,11 +2,6 @@
 
 package net.sf.gogui.tools.server;
 
-import net.sf.gogui.util.Options;
-import net.sf.gogui.util.ProcessUtil;
-import net.sf.gogui.util.StreamCopy;
-import net.sf.gogui.util.StringUtil;
-import net.sf.gogui.version.Version;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -15,6 +10,11 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+
+import net.sf.gogui.util.Options;
+import net.sf.gogui.util.ProcessUtil;
+import net.sf.gogui.util.StreamCopy;
+import net.sf.gogui.util.StringUtil;
 
 /** Connects a Go program supporting GTP to a socket. */
 public final class Server
@@ -110,7 +110,7 @@ public final class Server
             }
             if (opt.contains("version"))
             {
-                System.out.println("gogui-server " + Version.get());
+                System.out.println("gogui-server ");
                 return;
             }
             if (! opt.contains("port"))

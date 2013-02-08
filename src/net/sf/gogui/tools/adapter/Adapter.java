@@ -2,6 +2,10 @@
 
 package net.sf.gogui.tools.adapter;
 
+import static net.sf.gogui.go.GoColor.BLACK;
+import static net.sf.gogui.go.GoColor.EMPTY;
+import static net.sf.gogui.go.GoColor.WHITE;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,19 +14,16 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Locale;
-import net.sf.gogui.game.ConstNode;
+
 import net.sf.gogui.game.BoardUpdater;
-import net.sf.gogui.game.GameInfo;
+import net.sf.gogui.game.ConstNode;
 import net.sf.gogui.game.GameTree;
 import net.sf.gogui.game.TimeSettings;
 import net.sf.gogui.gamefile.GameReader;
-import net.sf.gogui.go.ConstPointList;
 import net.sf.gogui.go.Board;
 import net.sf.gogui.go.BoardUtil;
+import net.sf.gogui.go.ConstPointList;
 import net.sf.gogui.go.GoColor;
-import static net.sf.gogui.go.GoColor.BLACK;
-import static net.sf.gogui.go.GoColor.WHITE;
-import static net.sf.gogui.go.GoColor.EMPTY;
 import net.sf.gogui.go.GoPoint;
 import net.sf.gogui.go.InvalidKomiException;
 import net.sf.gogui.go.Komi;

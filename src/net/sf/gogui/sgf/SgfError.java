@@ -8,7 +8,9 @@ import net.sf.gogui.util.ErrorMessage;
 public class SgfError
     extends ErrorMessage
 {
-    /** Constructor.
+	private static final long serialVersionUID = 1L;
+
+	/** Constructor.
         @param message Error message. */
     public SgfError(String message)
     {
