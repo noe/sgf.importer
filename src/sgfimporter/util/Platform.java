@@ -163,10 +163,10 @@ public class Platform
         try
         {
             Object[] args = { handler };
-            Class[] arglist = { Platform.SpecialMacHandler.class };
+            Class<?>[] arglist = { Platform.SpecialMacHandler.class };
             String name = "sgfimporter.specialmac.RegisterSpecialMacHandler";
             Class<?> registerClass = Class.forName(name);
-            Constructor constructor = registerClass.getConstructor(arglist);
+            Constructor<?> constructor = registerClass.getConstructor(arglist);
             constructor.newInstance(args);
         }
         catch (Throwable e)

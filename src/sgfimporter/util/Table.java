@@ -21,7 +21,8 @@ public class Table
     public static class InvalidLocation
         extends ErrorMessage
     {
-        public InvalidLocation(String message)
+    	private static final long serialVersionUID = 1L;
+    	public InvalidLocation(String message)
         {
             super(message);
         }
@@ -31,7 +32,9 @@ public class Table
     public static class InvalidFormat
         extends ErrorMessage
     {
-        public InvalidFormat(String message)
+    	private static final long serialVersionUID = 1L;
+
+    	public InvalidFormat(String message)
         {
             super(message);
         }
@@ -41,6 +44,8 @@ public class Table
     public static class InvalidElement
         extends ErrorMessage
     {
+    	private static final long serialVersionUID = 1L;
+
         public InvalidElement(String message)
         {
             super(message);

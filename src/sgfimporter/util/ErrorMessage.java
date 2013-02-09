@@ -8,7 +8,9 @@ package sgfimporter.util;
 public class ErrorMessage
     extends Exception
 {
-    /** Constructor.
+	private static final long serialVersionUID = 1L;
+
+	/** Constructor.
         @param message The error message text. */
     public ErrorMessage(String message)
     {
